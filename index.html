@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techdact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#F5FBFF]">
+    <div id="hero" class="hero text-white min-h-screen w-full overflow-hidden bg-cover bg-center relative"
+     style="background-image: url('./Slideshow/Programmer\ at\ Work.jpeg');">
+        <nav class="top-0 flex justify-between items-center p-2 font-source-sans">
+            <div class="logo"><img src="./Slideshow/techdactlogo.png" alt="Logo" class=""></div>
+            <div class="flex items-center space-x-4 ml-[4%]">
+                <input type="text" placeholder="Search..." class="px-8 py-2 border border-gray-300 bg-white bg-opacity-20 backdrop-blur-md rounded-full focus:outline-none focus:ring-5 focus:ring-blue-500">
+            </div>
+            <ul class="flex space-x-4 text-2xl">
+                <li><a href="#" class="hover:text-blue-500">Home</a></li>
+                <li><a href="#" class="hover:text-blue-500">Explore courses</a></li>
+                <li><a href="#" class="hover:text-blue-500">About Us</a></li>
+                <li><a href="#" class="hover:text-blue-500">Contact</a></li>
+            </ul>
+            <div class="flex items-center text-2xl mr-[3%] gap-4">
+                <button class="px-4 py-2 bg-transparent border text-white rounded-full hover:bg-blue-600">Login</button>
+                <button class="px-4 py-2 bg-white border text-black rounded-full hover:bg-blue-600">Signup</button>
+            </div>
+        </nav>
+    
+        <div class="carousel-container absolute bottom-0 w-full overflow-hidden">
+            <div id="carousel" class="carousel flex ml-[55%] gap-4">
+                <div class="slide w-[35%] h-[90%] bg-black text-white rounded-2xl flex-shrink-0 overflow-hidden relative">
+                    <img src="./Slideshow/programming-background-collage (1).jpg" alt="Slide 1" class="w-full h-full object-cover">
+                </div>
+                <div class="slide w-[35%] h-[90%] bg-black text-white rounded-2xl flex-shrink-0 overflow-hidden relative">
+                    <img src="./Slideshow/a27c77bf-3b7d-41f8-996b-e59aee6227cc.jpg" alt="Slide 2" class="w-full h-full object-cover">
+                </div>
+                <div class="slide w-[35%] h-[90%] bg-black text-white rounded-2xl flex-shrink-0 overflow-hidden relative">
+                    <img src="./Slideshow/robot-hand-finger-ai-background-technology-graphics.jpg" alt="Slide 3" class="w-full h-full object-cover">
+                </div>
+                <div class="slide w-[35%] h-[90%] bg-black text-white rounded-2xl flex-shrink-0 overflow-hidden relative">
+                    <img src="./Techdact/Slideshow/programming-background-collage (4).jpg" alt="Slide 4" class="w-full h-full object-cover">
+                </div>
+                <!-- Duplicate slides for infinite effect -->
+                <div class="slide w-[35%] h-[90%] bg-black text-white rounded-2xl flex-shrink-0 overflow-hidden relative">
+                    <img src="./Techdact/Slideshow/programming-background-collage (1).jpg" alt="Slide 1" class="w-full h-full object-cover">
+                </div>
+                <div class="slide w-[35%] h-[90%] bg-black text-white rounded-2xl flex-shrink-0 overflow-hidden relative">
+                    <img src="./Techdact/Slideshow/programming-background-collage (2).jpg" alt="Slide 2" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+        
+        
+  <script src="script.js"></script>
+</body>
+</html>
