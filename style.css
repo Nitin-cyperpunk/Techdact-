@@ -4,14 +4,5 @@
 }
 
 .carousel {
-    animation: slide 16s linear infinite;
-}
-
-@keyframes slide {
-    0%, 100% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
+    transition: transform 0.5s ease-in-out;
 }
