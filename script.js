@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
         updateBackground();
     }
 
-    setInterval(nextSlide, 4000); // Change slide every 4 seconds
-    updateBackground(); // Initial background update
+    setInterval(nextSlide, 4000);
+    updateBackground();
 });
 
