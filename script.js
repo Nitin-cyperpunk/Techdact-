@@ -40,28 +40,11 @@ document.addEventListener('DOMContentLoaded', function () {
     updateBackground(); // Initial background update
 });
 
+function loco() {
+    (function () {
+        const locomotiveScroll = new LocomotiveScroll();
+    })();
+}
+loco();
 
-document.addEventListener('DOMContentLoaded', function () {
-    const cardsContainer = document.querySelector('.carousel');
-    const hiddenCards = document.querySelectorAll('.card.hidden');
 
-    // Function to reveal hidden cards
-    function revealCards() {
-      hiddenCards.forEach(card => {
-        card.classList.remove('hidden');
-      });
-    }
-
-    // Add event listener for scroll
-    cardsContainer.addEventListener('scroll', function () {
-      if (cardsContainer.scrollLeft + cardsContainer.clientWidth >= cardsContainer.scrollWidth) {
-        revealCards();
-      }
-    });
-
-    const revealButton = document.createElement('button');
-    revealButton.textContent = 'Show More';
-    revealButton.classList.add('mt-4', 'px-4', 'py-2', 'bg-blue-500', 'text-white', 'rounded');
-    revealButton.addEventListener('click', revealCards);
-    document.querySelector('.ml-[6%]').appendChild(revealButton);
-  });
