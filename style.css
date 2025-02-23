@@ -25,3 +25,21 @@
     transform: scale(1.1);
     transition: transform 0.3s ease-in-out;
 }
+
+.marquee-container {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+}
+.marquee-content {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
