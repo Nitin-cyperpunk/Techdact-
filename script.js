@@ -50,20 +50,25 @@ loco();
 
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const mainMenu = document.getElementById('main-menu');
-    const searchBar = document.querySelector('.hidden.md\:flex');
-    const loginSignup = document.querySelector('.hidden.md\:flex.items-center');
+    const mobileMenu = document.getElementById('mobile-menu'); // Assuming you want to hide the desktop menu too
 
+    
     mobileMenu.classList.add('hidden');
 
+    
     mobileMenuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
+
+       
+        if(mainMenu){
+            mainMenu.classList.add('hidden');
+        }
+
     });
 
+   
     function checkScreenWidth() {
-        if (window.innerWidth >= 768) {
-            mobileMenu.classList.add('hidden');
+        if (window.innerWidth >= 768) { 
             if (mainMenu) {
                 mainMenu.classList.remove('hidden');
             }
@@ -73,7 +78,8 @@ document.addEventListener('DOMContentLoaded', function() {
             if (loginSignup) {
                 loginSignup.classList.remove('hidden');
             }
-        } else {
+
+        }else{
             if (mainMenu) {
                 mainMenu.classList.add('hidden');
             }
@@ -86,6 +92,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    
     checkScreenWidth();
+
+    
     window.addEventListener('resize', checkScreenWidth);
 });
