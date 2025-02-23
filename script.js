@@ -48,3 +48,44 @@ function loco() {
 loco();
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mainMenu = document.getElementById('main-menu');
+    const searchBar = document.querySelector('.hidden.md\:flex');
+    const loginSignup = document.querySelector('.hidden.md\:flex.items-center');
+
+    mobileMenu.classList.add('hidden');
+
+    mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.toggle('hidden');
+    });
+
+    function checkScreenWidth() {
+        if (window.innerWidth >= 768) {
+            mobileMenu.classList.add('hidden');
+            if (mainMenu) {
+                mainMenu.classList.remove('hidden');
+            }
+            if (searchBar) {
+                searchBar.classList.remove('hidden');
+            }
+            if (loginSignup) {
+                loginSignup.classList.remove('hidden');
+            }
+        } else {
+            if (mainMenu) {
+                mainMenu.classList.add('hidden');
+            }
+            if (searchBar) {
+                searchBar.classList.add('hidden');
+            }
+            if (loginSignup) {
+                loginSignup.classList.add('hidden');
+            }
+        }
+    }
+
+    checkScreenWidth();
+    window.addEventListener('resize', checkScreenWidth);
+});
