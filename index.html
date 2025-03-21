@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="./Slideshow/techdactlogo.png">
 </head>
-<body class="bg-[#F5FBFF]">
+<body class="bg-[#F5FBFF] overflow-x-hidden">
     <div id="hero" class="hero text-white min-h-screen w-full overflow-hidden bg-cover bg-center relative transition-background">
       <nav class=" flex flex-col md:flex-row justify-between items-center p-1 font-source-sans  text-white h-auto md:h-20 relative">
         <div class="logo flex justify-between md:justify-start items-center w-full md:w-auto">
@@ -287,31 +287,32 @@
   </button>
 </div>
 
-<div class="journey w-full bg-[#DAEDFF] h-auto mt-11 top-10 flex flex-col md:flex-row items-center justify-center p-4">
-  <div class="img w-full md:w-1/2 flex relative md:ml-[6%] md:block hidden top-8">
+<div class="journey w-full bg-[#DAEDFF] h-auto mt-11 flex flex-col md:flex-row items-center justify-center p-4">
+  <div class="img w-full md:w-1/2 flex relative md:ml-[6%]">
     <div class="absolute -top-20 left-0 transform -translate-y-1/2 md:block hidden">
-      <img src="./Techdact/Banner/pexels-karolina-grabowska-7875953.jpg" alt="" class="rounded-3xl w-60 h-60 object-cover">
+      <img src="./Techdact/Banner/pexels-karolina-grabowska-7875953.jpg" alt="" class="rounded-3xl w-48 h-48 md:w-60 md:h-60 object-cover">
     </div>
     <div class="absolute mt-2 left-3 transform translate-y-1/4 md:block hidden">
-      <img src="./Techdact/Banner/pexels-rdne-7845099.jpg" alt="" class="rounded-3xl w-60 h-40 object-cover">
+      <img src="./Techdact/Banner/pexels-rdne-7845099.jpg" alt="" class="rounded-3xl w-48 h-32 md:w-60 md:h-40 object-cover">
     </div>
     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-      <img src="./Techdact/Banner/pexels-olly-3756681.jpg" alt="" class="rounded-3xl w-40 h-40 object-cover">
+      <img src="./Techdact/Banner/pexels-olly-3756681.jpg" alt="" class="rounded-3xl w-32 h-32 md:w-40 md:h-40 object-cover">
     </div>
   </div>
 
   <div class="text w-full md:w-1/2 flex flex-col items-center justify-center p-4 mt-6 md:mt-0">
-    <h1 class="text-blue-900 text-2xl font-semibold text-center">Start your Journey now</h1>
-    <p class="text-lg mt-2 text-gray-500 text-center">
+    <h1 class="text-blue-900 text-xl md:text-2xl font-semibold text-center">Start your Journey now</h1>
+    <p class="text-base md:text-lg mt-2 text-gray-500 text-center">
       80% of learners report career benefits, such as new skills,<br>
       increased pay, and new job opportunities. Be the next one to get<br>
       your new opportunities!
     </p>
     <div class="mt-8 mb-5">
-      <button class="px-4 py-2 bg-[#003366] border text-white rounded-full hover:bg-blue-600 text-xl font-semibold">Book free demo now</button>
+      <button class="px-4 py-2 bg-[#003366] border text-white rounded-full hover:bg-blue-600 text-lg md:text-xl font-semibold">Book free demo now</button>
     </div>
   </div>
 </div>
+
 
 <br>
 <br>
@@ -483,14 +484,14 @@ Years of experienced : 5yrs</h2>
 
   <hr class="border-t border-blue-300 my-4">
   
-  <div class="ml-[10%]  gap-11 flex flex-col md:flex-row p-9">
+  <div class=" md:ml-[10%] w-full gap-11 flex flex-col md:flex-row p-9">
     <!-- Popular Courses -->
     <div class="w-full md:w-1/4 h-auto text-white mt-5 relative">
         <div class="flex justify-between items-center cursor-pointer md:cursor-default" onclick="toggleDropdown('popularCourses')">
             <h1 class="text-lg">Popular Courses</h1>
-            <span class="md:hidden">&#x25BC;</span> <!-- Down arrow for mobile view -->
+            <span class="md:hidden"><img src="./down.svg" alt="" class="w-10 h-10"></span> <!-- Down arrow for mobile view -->
         </div>
-        <hr class="my-2 border-t border-gray-300 md:hidden">
+        <hr class="my-1 border-t border-gray-300 md:hidden">
         <ul id="popularCourses" class="space-y-1 mt-2 hidden md:block">
             <li><a href="#learn-ai" class="text-sm text-white hover:text-blue-500">Learn AI</a></li>
             <li><a href="#learn-machine-learning" class="text-sm text-white hover:text-blue-500">Learn Machine Learning</a></li>
@@ -508,7 +509,7 @@ Years of experienced : 5yrs</h2>
     <div class="w-full md:w-1/4 h-auto text-white mt-5 relative">
         <div class="flex justify-between items-center cursor-pointer md:cursor-default" onclick="toggleDropdown('trendingCourses')">
             <h1 class="text-lg">Trending Courses</h1>
-            <span class="md:hidden">&#x25BC;</span> <!-- Down arrow for mobile view -->
+            <span class="md:hidden"><img src="./down.svg" alt="" class="w-10 h-10"></span> <!-- Down arrow for mobile view -->
         </div>
         <hr class="my-2 border-t border-gray-300 md:hidden">
         <ul id="trendingCourses" class="space-y-1 mt-2 hidden md:block">
@@ -528,7 +529,7 @@ Years of experienced : 5yrs</h2>
     <div class="w-full md:w-1/4 h-auto text-white mt-5 relative">
         <div class="flex justify-between items-center cursor-pointer md:cursor-default" onclick="toggleDropdown('onlineTraining')">
             <h1 class="text-lg">Online Training</h1>
-            <span class="md:hidden">&#x25BC;</span> <!-- Down arrow for mobile view -->
+            <span class="md:hidden"><img src="./down.svg" alt="" class="w-10 h-10"></span> <!-- Down arrow for mobile view -->
         </div>
         <hr class="my-2 border-t border-gray-300 md:hidden">
         <ul id="onlineTraining" class="space-y-1 mt-2 hidden md:block">
@@ -548,7 +549,7 @@ Years of experienced : 5yrs</h2>
     <div class="w-full md:w-1/4 h-auto text-white mt-5 relative">
         <div class="flex justify-between items-center cursor-pointer md:cursor-default" onclick="toggleDropdown('jobOrientedCourses')">
             <h1 class="text-lg">Job Oriented Courses</h1>
-            <span class="md:hidden">&#x25BC;</span> <!-- Down arrow for mobile view -->
+            <span class="md:hidden"><img src="./down.svg" alt="" class="w-10 h-10"></span> <!-- Down arrow for mobile view -->
         </div>
         <hr class="my-2 border-t border-gray-300 md:hidden">
         <ul id="jobOrientedCourses" class="space-y-1 mt-2 hidden md:block">
@@ -564,16 +565,12 @@ Years of experienced : 5yrs</h2>
         </ul>
     </div>
 </div>
-
-
-
-  
-<div class="ml-[10%] md:ml-[2%] gap-6 flex flex-col md:flex-row p-9">
+<div class=" md:ml-[10%] w-full gap-11 flex flex-col md:flex-row p-9">
   <!-- About Us -->
   <div class="w-full md:w-1/3 h-auto text-white mt-1 relative">
       <div class="flex justify-between items-center cursor-pointer md:cursor-default" onclick="toggleDropdown('aboutUs')">
           <h1 class="text-lg">About Us</h1>
-          <span class="md:hidden">&#x25BC;</span> <!-- Down arrow for mobile view -->
+          <span class="md:hidden"><img src="./down.svg" alt="" class="w-10 h-10"></span> <!-- Down arrow for mobile view -->
       </div>
       <hr class="my-2 border-t border-gray-300 md:hidden">
       <ul id="aboutUs" class="space-y-1 mt-2 hidden md:block">
@@ -590,7 +587,7 @@ Years of experienced : 5yrs</h2>
   <div class="w-full md:w-1/3 h-auto text-white mt-1 relative">
       <div class="flex justify-between items-center cursor-pointer md:cursor-default" onclick="toggleDropdown('connect')">
           <h1 class="text-lg">Connect</h1>
-          <span class="md:hidden">&#x25BC;</span> <!-- Down arrow for mobile view -->
+          <span class="md:hidden"><img src="./down.svg" alt="" class="w-10 h-10"></span> <!-- Down arrow for mobile view -->
       </div>
       <hr class="my-2 border-t border-gray-300 md:hidden">
       <ul id="connect" class="space-y-1 mt-2 hidden md:block">
@@ -606,7 +603,7 @@ Years of experienced : 5yrs</h2>
   <div class="w-full md:w-1/3 h-auto text-white mt-1 relative">
       <div class="flex justify-between items-center cursor-pointer md:cursor-default" onclick="toggleDropdown('legal')">
           <h1 class="text-lg">Legal</h1>
-          <span class="md:hidden">&#x25BC;</span> <!-- Down arrow for mobile view -->
+          <span class="md:hidden"><img src="./down.svg" alt="" class="w-10 h-10"></span> <!-- Down arrow for mobile view -->
       </div>
       <hr class="my-2 border-t border-gray-300 md:hidden">
       <ul id="legal" class="space-y-1 mt-2 hidden md:block">
