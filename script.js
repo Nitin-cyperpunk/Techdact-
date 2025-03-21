@@ -22,9 +22,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const currentSlide = slides[index];
         const imgSrc = currentSlide.querySelector('img').src;
         hero.style.backgroundImage = `url('${imgSrc}')`;
-        console.log(`Background updated to: ${imgSrc}`); // Debugging line
+        console.log(`Background updated to: ${imgSrc}`); 
 
-        // Update text content
+       
         courseTitle.textContent = courseData[index].title;
         courseDetails.textContent = courseData[index].details;
     }
@@ -36,8 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
         updateBackground();
     }
 
-    setInterval(nextSlide, 4000); // Change slide every 4 seconds
-    updateBackground(); // Initial background update
+    setInterval(nextSlide, 4000); 
+    updateBackground(); //
 });
 
 function loco() {
