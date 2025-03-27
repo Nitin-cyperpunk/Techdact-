@@ -50,41 +50,38 @@ loco();
 
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu'); // Assuming you want to hide the desktop menu too
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mainMenu = document.getElementById('main-menu');
+    const searchBar = document.querySelector('.md\\:flex input[type="text"]');
+    const loginSignup = document.getElementById('loginSignup');
 
-    
+    // Ensure the mobile menu is hidden initially
     mobileMenu.classList.add('hidden');
 
-    
+    // Toggle mobile menu visibility
     mobileMenuButton.addEventListener('click', function() {
         mobileMenu.classList.toggle('hidden');
-
-       
-        if(mainMenu){
-            mainMenu.classList.add('hidden');
-        }
-
     });
 
-   
+    // Function to check screen width and adjust visibility of elements
     function checkScreenWidth() {
-        if (window.innerWidth >= 768) { 
+        if (window.innerWidth >= 768) {
             if (mainMenu) {
                 mainMenu.classList.remove('hidden');
             }
             if (searchBar) {
-                searchBar.classList.remove('hidden');
+                searchBar.parentElement.classList.remove('hidden');
             }
             if (loginSignup) {
                 loginSignup.classList.remove('hidden');
             }
-
-        }else{
+            mobileMenu.classList.add('hidden'); // Hide mobile menu on larger screens
+        } else {
             if (mainMenu) {
                 mainMenu.classList.add('hidden');
             }
             if (searchBar) {
-                searchBar.classList.add('hidden');
+                searchBar.parentElement.classList.add('hidden');
             }
             if (loginSignup) {
                 loginSignup.classList.add('hidden');
@@ -92,12 +89,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    
+    // Initial check and add event listener for window resize
     checkScreenWidth();
-
-    
     window.addEventListener('resize', checkScreenWidth);
 });
+
 
 var swiper = new Swiper('.mySwiper', {
     slidesPerView: 1,
