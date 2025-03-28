@@ -33,10 +33,12 @@
 .swiper-wrapper {
     display: flex;
     align-items: center;
+    flex-wrap: nowrap;
 }
 
 .swiper-slide {
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
 }
 
@@ -66,6 +68,12 @@
     transform: translateX(-50%);
 }
 
+@media (max-width: 640px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none !important;
+  }
+}
     
     </style>
 </head>
@@ -109,11 +117,11 @@
         <p>Explore Courses  >  Amazon Web Services (AWS) Certification Courses</p>
     </div>
 
-    <div class="flex flex-row h-[700px] bg-[#E6F4FF]">
-        <div class="w-1/2 pl-[100px] pt-[87px]">
+    <div class="flex flex-col md:flex-row md:h-[700px] bg-[#E6F4FF]">
+        <div class="w-full md:w-1/2 px-[18px] py-[10px] md:pl-[100px] md:pt-[87px]">
             <img src="https://s3-alpha-sig.figma.com/img/2121/3356/b7c4a9d4fe0d522ceeaee8b58d86175f?Expires=1743379200&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=LFZamEmQWLU-XnUQIwaQGSuKXfbvE0nZ8NxWJAzAFY9M8HjhhTFSe8av8ibexAN--LglvpxWYmy7c6pkc98-Kds4YA~Rbi6uxoZSJ6dO1hNWGJTifBeuLvuZhM50I6xZlOMcs4c-ar~Z--nf2NqtghugbpBl3bDLfN~FsoJND8Q5u2EHNnQ8rFytmRW9W1G8KxBo8RJKLn9zQXKnVflUHYAe5TG2v4YpSZxiSUIPupF-cW73s6y8EmCCIvXx1oDAGK76Dm5k53aynUMrmodBMbrWrEUWTsSrY8gAULEqswtTeyNIw5JCrX0tt5ju6kdrqZ1qPIy3pBrSAc4zlJUTbg__" alt="aws" 
-            class="w-[126px] h-[111px]">
-            <div class="mt-[40px] text-[32px] font-semibold">
+            class="w-[126px] h-[111px] mx-auto md:mx-0">
+            <div class="mt-[40px] text-[20px]  md:text-[32px] font-semibold">
                 Amazon Web Services (AWS) Certification Courses
             </div>
             <div class="flex gap-x-[16px] mt-[16px] text-[#00000080] text-[16px]">
@@ -130,8 +138,8 @@
                 Amazon Web Services (AWS) training and certification certifies professionals in various Amazon Web Services cloud products and solutions, ranging from cloud practitioner to machine learning specialist. AWS has a wide spectrum of certifications catering to a variety of cloud-related skill levels extending from beginners to advanced professionals.
             </div>
         </div>
-        <div class="w-1/2">
-            <div class="bg-white w-[620px] h-[580px] rounded-3xl mt-[38px] ml-[30px] px-[81px] pt-[25px] ">
+        <div class="w-full md:w-1/2 px-[18px] pb-[10px] md:pb[0px] md:px-[0px]">
+            <div class="bg-white  md:w-[620px] md:h-[580px] rounded-3xl mt-[38px] md:ml-[30px] px-[45px] md:px-[81px] pt-[20] md:pt-[25px] ">
                 <form class="text-[20px]">
                     <h1 class="text-[30px] font-semibold text-[#0151A1] text-center">Register Now</h1>
 
@@ -148,23 +156,25 @@
                     <p class="mt-[16px]">Email Id</p>
                     <input required id="email" type="email" placeholder="Enter your Email" class="focus:outline-none mt-[8px] border border-[#D9D9D9] bg-[#D9D9D933] rounded-full text-[14px] font-light italic  px-4 py-[0.35rem] w-full h-[40px] mb-[0.5rem] placeholder:text-[#0000004D] placeholder:opacity-100">
 
-                    <div class="flex justify-center items-center mt-[16px]">
+                    <div class="flex justify-center items-center pb-[15px] md:pb-[0px] md:mt-[16px]">
                         <button type="submit" class="w-[200px] h-[50px]  bg-[#0151A1] rounded-full justify-center text-white font-semibold text-[24px]">Submit</button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <div class="mt-[50px] pl-[100px]">
-        <h1 class="text-[32px] font-semibold ">Trending Certifications</h1>
-        <h2 class="text-[16px] text-[#00000080]">Dive into Top Certifications that learners on Techdact are preparing for</h2>
 
+    <div class="mt-[50px] md:pl-[100px]">
+      <div class="ml-[18px]">
+        <h1 class="text-[32px] font-semibold ">Trending Certifications</h1>
+        <h2 class="text-[16px]  text-[#00000080]">Dive into Top Certifications that learners on Techdact are preparing for</h2>
+      </div>
         <!-- Swiper Container -->
         <div class="swiper mt-[48px]">
             <div class="swiper-wrapper">
                 <!-- Slide 1 -->
                 <div class="swiper-slide">
-                    <div class="card flex w-[390px] h-[160px] bg-white rounded-[35px] shadow-xl pt-[16px] pl-[22px]">
+                    <div class="card flex w-[390px] h-[160px] min-w-[280px] max-w-[390px] min-h-[115px] max-h-[160px] flex-none bg-white rounded-[35px] shadow-xl pt-[16px] pl-[22px]">
                         <div class="w-[75%]">
                             <h1 class="text-xl leading-6 font-semibold ">AWS Certified Cloud Practitioner</h1>
                             <h2 class="mt-[2px] text-base text-[#00000080]">Issued by Amazon Web Services (AWS)</h2>
@@ -184,12 +194,12 @@
                             </div>
                         </div>
                         <div class="w-[25%] mt-[20px] mr-[10px]">
-                            <img src="./Techdact-/Techdact/Courses_icons/awsCloudPrac.png" alt="">
+                          <img src="./Techdact/Courses_icons/awsCloudPrac.png" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="card flex w-[390px] h-[160px] bg-white rounded-[35px] shadow-xl pt-[16px] pl-[22px]">
+                    <div class="card flex w-[390px] h-[160px] min-w-[280px] max-w-[390px] min-h-[115px] max-h-[160px] flex-none bg-white rounded-[35px] shadow-xl pt-[16px] pl-[22px]">
                         <div class="w-[75%]">
                             <h1 class="text-xl leading-6 font-semibold ">AWS Certified Solutions Architect - Associate</h1>
                             <h2 class="mt-[2px] text-base text-[#00000080]">Issued by Amazon Web Services (AWS)</h2>
@@ -214,7 +224,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="card flex w-[390px] h-[160px] bg-white rounded-[35px] shadow-xl pt-[16px] pl-[22px]">
+                    <div class="card flex w-[390px] h-[160px] min-w-[280px] max-w-[390px] min-h-[115px] max-h-[160px] flex-none bg-white rounded-[35px] shadow-xl pt-[16px] pl-[22px]">
                         <div class="w-[75%]">
                             <h1 class="text-xl leading-6 font-semibold ">AWS Certified Developer - Associate</h1>
                             <h2 class="mt-[2px] text-base text-[#00000080]">Issued by Amazon Web Services (AWS)</h2>
@@ -239,7 +249,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="card flex w-[390px] h-[160px] bg-white rounded-[35px] shadow-xl pt-[16px] pl-[22px]">
+                    <div class="card flex w-[390px] h-[160px] min-w-[280px] max-w-[390px] min-h-[115px] max-h-[160px] flex-none bg-white rounded-[35px] shadow-xl pt-[16px] pl-[22px]">
                         <div class="w-[75%]">
                             <h1 class="text-xl leading-6 font-semibold ">AWS Certified SysOps - Administrator</h1>
                             <h2 class="mt-[2px] text-base text-[#00000080]">Issued by Amazon Web Services (AWS)</h2>
@@ -264,7 +274,7 @@
                     </div>
                 </div>
                 <div class="swiper-slide">
-                    <div class="card flex w-[390px] h-[160px] bg-white rounded-[35px] shadow-xl pt-[16px] pl-[22px]">
+                    <div class="card flex w-[390px] h-[160px] min-w-[280px] max-w-[390px] min-h-[115px] max-h-[160px] flex-none bg-white rounded-[35px] shadow-xl pt-[16px] pl-[22px]">
                         <div class="w-[75%]">
                             <h1 class="text-xl leading-6 font-semibold ">AWS Certified Solutions DevOps - Beginner</h1>
                             <h2 class="mt-[2px] text-base text-[#00000080]">Issued by Amazon Web Services (AWS)</h2>
@@ -296,13 +306,12 @@
             <div class="swiper-button-prev"></div>
 
         </div>
- 
     </div>
-    <div class="mt-[25px] pl-[100px]">
+    <div class="mt-[25px] px-[16px] md:pl-[100px]">
         <h1 class="text-[32px] font-semibold ">Browse Amazon Web Services (AWS) Certifications by Skill</h1>
         <h2 class="text-[16px] text-[#00000080]">Get Certified for in-demand skills through our catalog of certification preparation courses</h2>
 
-        <div class="mt-[24px] grid grid-cols-3 gap-8">
+        <div class="mt-[24px] -ml-[16px] grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="h-[200px] w-[400px] bg-white rounded-[35px] p-[25px]">
                 <div class="flex">
                     <div class="w-[80%]">
@@ -395,14 +404,14 @@
         </div>
     </div>
 
-    <div class="mt-[48px] pl-[100px]">
+    <div class="mt-[48px] px-[16px] md:pl-[100px]">
         <h1 class="text-[32px] font-semibold ">Browse Amazon Web Services (AWS) Certifications by Skill</h1>
         <h2 class="text-[20px] mt-[16px]">Get Certified for in-demand skills through our catalog of certification preparation courses</h2>
 
         <div class="mt-6 space-y-6">
             
-            <div class="flex w-[900px] rounded-xl p-4">
-                <img src="./Techdact/Course_img/ml.png" class="w-[280px] h-[180px] rounded-[25px]" alt="AWS Course Image">
+            <div class="flex w-[380px] md:w-[900px] rounded-xl md:p-4">
+                <img src="./Techdact/Course_img/ml.png" class="w-[120px] h-[90px] md:w-[280px] md:h-[180px] rounded-[25px]" alt="AWS Course Image">
                 <div class="ml-4">
                     <h2 class="text-xl font-semibold mt-3">
                         AWS Certified Machine Learning Specialty: 3 Practice Exams
@@ -417,8 +426,8 @@
                 </div>
             </div>
 
-            <div class="flex w-[900px] rounded-xl p-4">
-                <img src="./Techdact/Course_img/aws.png" class="w-[280px] h-[180px] rounded-[25px]" alt="AWS Course Image">
+            <div class="flex w-[380px] md:w-[900px] rounded-xl p-4">
+                <img src="./Techdact/Course_img/aws.png" class="w-[120px] h-[90px] md:w-[280px] md:h-[180px] rounded-[25px]" alt="AWS Course Image">
                 <div class="ml-4">
                     <h2 class="text-xl font-semibold mt-3">
                         AWS Introduction-  Understand Basic Concepts in 3 Hours!
@@ -433,8 +442,8 @@
                 </div>
             </div>
 
-            <div class="flex w-[900px] rounded-xl p-4">
-                <img src="./Techdact/Course_img/cloud.png" class="w-[280px] h-[180px] rounded-[25px]" alt="AWS Course Image">
+            <div class="flex w-[380px] md:w-[900px] rounded-xl p-4">
+                <img src="./Techdact/Course_img/cloud.png" class="w-[120px] h-[90px] md:w-[280px] md:h-[180px] rounded-[25px]" alt="AWS Course Image">
                 <div class="ml-4">
                     <h2 class="text-xl font-semibold mt-3">
                         Introduction to Cloud Computing on AWS for Beginners [2025]
@@ -449,8 +458,8 @@
                 </div>
             </div>
 
-            <div class="flex w-[900px] rounded-xl p-4">
-                <img src="./Techdact/Course_img/ml.png" class="w-[280px] h-[180px] rounded-[25px]" alt="AWS Course Image">
+            <div class="flex w-[380px] md:w-[900px] rounded-xl p-4">
+                <img src="./Techdact/Course_img/ml.png" class="w-[120px] h-[90px] md:w-[280px] md:h-[180px] rounded-[25px]" alt="AWS Course Image">
                 <div class="ml-4">
                     <h2 class="text-xl font-semibold mt-3">
                         AWS VPC and Networking in depth: Learn practically in 8 hrs
@@ -467,282 +476,266 @@
         </div>
     </div>
 
-    <footer class="w-full h-auto bg-[#003366] mt-8 p-5">
-        <div class="w-full flex items-center justify-between">
-          <div class="flex items-center">
-            <div class="flex flex-col">
-              <img src="./Slideshow/techdactlogo.png" alt="Logo" class="w-80 h-20">
-            <div class="ml-4">
-              <h2 class="text-xl text-white">+91 1234567890</h2>
+    <footer class="w-full  h-auto bg-[#003366] mt-8 p-5">
+      <div class="w-full flex flex-col md:flex-row items-center justify-between p-4">
+        <!-- Logo and Contact Info -->
+        <div class="flex items-center mb-4 md:mb-0">
+          <div class="flex flex-col items-center md:items-start">
+            <img src="./Slideshow/techdactlogo.png" alt="Logo" class="w-60 md:w-60 h-16">
+            <div class="ml-0 md:ml-4 mt-2 md:mt-0 text-center md:text-left">
+              <h2 class="text-lg md:text-xl text-white">+91 1234567890</h2>
               <p class="text-white">techdact@gmail.com</p>
             </div>
-            </div>
           </div>
-          <div class="flex space-x-4 mr-[10%]">
-            <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-gray-900 animate-bounce">
-              <i class="fab fa-facebook-f fa-2x"></i>
-            </a>
-            <a href="https://www.twitter.com" target="_blank" class="text-white hover:text-gray-900 animate-bounce">
-              <i class="fab fa-twitter fa-2x"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-gray-900 animate-bounce">
-              <i class="fab fa-instagram fa-2x"></i>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank" class="text-white hover:text-gray-900 animate-bounce">
-              <i class="fab fa-linkedin-in fa-2x"></i>
-            </a>
-            <a href="https://www.youtube.com" target="_blank" class="text-white hover:text-gray-900 animate-bounce">
-              <i class="fab fa-youtube fa-2x"></i>
-            </a>
-          </div>
-          
         </div>
-      
-        <hr class="border-t border-blue-300 my-4">
-        
-        <div class="ml-[10%] gap-11  flex flex-col md:flex-row p-9">
-          <div class="w-30 h-auto text-white mt-5">
+  
+        <!-- Social Icons -->
+        <div class="flex space-x-3 justify-center md:justify-end w-full md:w-auto">
+          <a href="https://www.facebook.com" target="_blank" class="text-white hover:text-gray-900 animate-bounce">
+            <i class="fab fa-facebook-f fa-2x"></i>
+          </a>
+          <a href="https://www.twitter.com" target="_blank" class="text-white hover:text-gray-900 animate-bounce">
+            <i class="fab fa-twitter fa-2x"></i>
+          </a>
+          <a href="https://www.instagram.com" target="_blank" class="text-white hover:text-gray-900 animate-bounce">
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" class="text-white hover:text-gray-900 animate-bounce">
+            <i class="fab fa-linkedin-in fa-2x"></i>
+          </a>
+          <a href="https://www.youtube.com" target="_blank" class="text-white hover:text-gray-900 animate-bounce">
+            <i class="fab fa-youtube fa-2x"></i>
+          </a>
+        </div>
+      </div>
+  
+  
+      <hr class="border-t border-blue-300 my-4">
+  
+      <div class="md:ml-[10%] w-full gap-4 flex flex-col md:flex-row p-4 md:p-9">
+        <!-- Popular Courses -->
+        <div class="w-full md:w-1/4 h-auto text-white mt-2 md:mt-5 relative">
+          <div class="flex justify-between items-center cursor-pointer md:cursor-default"
+            onclick="toggleDropdown('popularCourses')">
             <h1 class="text-lg">Popular Courses</h1>
-            <ul class="space-y-1 mt-2">
-              <li>
-                <a href="#learn-ai" class="text-sm text-white hover:text-blue-500">Learn AI</a>
-              </li>
-              <li>
-                <a href="#learn-machine-learning" class="text-sm text-white hover:text-blue-500">Learn Machine Learning</a>
-              </li>
-              <li>
-                <a href="#learn-database" class="text-sm text-white hover:text-blue-500">Learn Database</a>
-              </li>
-              <li>
-                <a href="#learn-cloud-computing" class="text-sm text-white hover:text-blue-500">Learn Cloud Computing</a>
-              </li>
-              <li>
-                <a href="#learn-aws" class="text-sm text-white hover:text-blue-500">Learn AWS</a>
-              </li>
-              <li>
-                <a href="#learn-automating-testing" class="text-sm text-white hover:text-blue-500">Learn Automating Testing</a>
-              </li>
-              <li>
-                <a href="#learn-web-technologies" class="text-sm text-white hover:text-blue-500">Learn Web Technologies</a>
-              </li>
-              <li>
-                <a href="#learn-python" class="text-sm text-white hover:text-blue-500">Learn Python</a>
-              </li>
-              <li>
-                <a href="#learn-html-css" class="text-sm text-white hover:text-blue-500">Learn HTML/CSS</a>
-              </li>
-            </ul>
+            <span class="md:hidden"><img src="./down.svg" alt="" class="w-6 h-6"></span>
+            <!-- Down arrow for mobile view -->
           </div>
-        
-          <div class="w-30 h-auto text-white mt-5">
+          <hr class="my-1 border-t border-gray-300 md:hidden">
+          <ul id="popularCourses" class="space-y-1 mt-2 hidden md:block">
+            <li><a href="#learn-ai" class="text-sm text-white hover:text-blue-500">Learn AI</a></li>
+            <li><a href="#learn-machine-learning" class="text-sm text-white hover:text-blue-500">Learn Machine
+                Learning</a></li>
+            <li><a href="#learn-database" class="text-sm text-white hover:text-blue-500">Learn Database</a></li>
+            <li><a href="#learn-cloud-computing" class="text-sm text-white hover:text-blue-500">Learn Cloud Computing</a>
+            </li>
+            <li><a href="#learn-aws" class="text-sm text-white hover:text-blue-500">Learn AWS</a></li>
+            <li><a href="#learn-automating-testing" class="text-sm text-white hover:text-blue-500">Learn Automating
+                Testing</a></li>
+            <li><a href="#learn-web-technologies" class="text-sm text-white hover:text-blue-500">Learn Web
+                Technologies</a></li>
+            <li><a href="#learn-python" class="text-sm text-white hover:text-blue-500">Learn Python</a></li>
+            <li><a href="#learn-html-css" class="text-sm text-white hover:text-blue-500">Learn HTML/CSS</a></li>
+          </ul>
+        </div>
+  
+        <!-- Trending Courses -->
+        <div class="w-full md:w-1/4 h-auto text-white mt-2 md:mt-5 relative">
+          <div class="flex justify-between items-center cursor-pointer md:cursor-default"
+            onclick="toggleDropdown('trendingCourses')">
             <h1 class="text-lg">Trending Courses</h1>
-            <ul class="space-y-1 mt-2">
-              <li>
-                <a href="#learn-ai" class="text-sm text-white hover:text-blue-500">Learn AI</a>
-              </li>
-              <li>
-                <a href="#learn-machine-learning" class="text-sm text-white hover:text-blue-500">Learn Machine Learning</a>
-              </li>
-              <li>
-                <a href="#learn-database" class="text-sm text-white hover:text-blue-500">Learn Database</a>
-              </li>
-              <li>
-                <a href="#learn-cloud-computing" class="text-sm text-white hover:text-blue-500">Learn Cloud Computing</a>
-              </li>
-              <li>
-                <a href="#learn-aws" class="text-sm text-white hover:text-blue-500">Learn AWS</a>
-              </li>
-              <li>
-                <a href="#learn-automating-testing" class="text-sm text-white hover:text-blue-500">Learn Automating Testing</a>
-              </li>
-              <li>
-                <a href="#learn-web-technologies" class="text-sm text-white hover:text-blue-500">Learn Web Technologies</a>
-              </li>
-              <li>
-                <a href="#learn-python" class="text-sm text-white hover:text-blue-500">Learn Python</a>
-              </li>
-              <li>
-                <a href="#learn-html-css" class="text-sm text-white hover:text-blue-500">Learn HTML/CSS</a>
-              </li>
-            </ul>
+            <span class="md:hidden"><img src="./down.svg" alt="" class="w-6 h-6"></span>
+            <!-- Down arrow for mobile view -->
           </div>
-        
-          <div class="w-30 h-auto text-white mt-5">
+          <hr class="my-1 border-t border-gray-300 md:hidden">
+          <ul id="trendingCourses" class="space-y-1 mt-2 hidden md:block">
+            <li><a href="#learn-ai" class="text-sm text-white hover:text-blue-500">Learn AI</a></li>
+            <li><a href="#learn-machine-learning" class="text-sm text-white hover:text-blue-500">Learn Machine
+                Learning</a></li>
+            <li><a href="#learn-database" class="text-sm text-white hover:text-blue-500">Learn Database</a></li>
+            <li><a href="#learn-cloud-computing" class="text-sm text-white hover:text-blue-500">Learn Cloud Computing</a>
+            </li>
+            <li><a href="#learn-aws" class="text-sm text-white hover:text-blue-500">Learn AWS</a></li>
+            <li><a href="#learn-automating-testing" class="text-sm text-white hover:text-blue-500">Learn Automating
+                Testing</a></li>
+            <li><a href="#learn-web-technologies" class="text-sm text-white hover:text-blue-500">Learn Web
+                Technologies</a></li>
+            <li><a href="#learn-python" class="text-sm text-white hover:text-blue-500">Learn Python</a></li>
+            <li><a href="#learn-html-css" class="text-sm text-white hover:text-blue-500">Learn HTML/CSS</a></li>
+          </ul>
+        </div>
+  
+        <!-- Online Training -->
+        <div class="w-full md:w-1/4 h-auto text-white mt-2 md:mt-5 relative">
+          <div class="flex justify-between items-center cursor-pointer md:cursor-default"
+            onclick="toggleDropdown('onlineTraining')">
             <h1 class="text-lg">Online Training</h1>
-            <ul class="space-y-1 mt-2">
-              <li>
-                <a href="#learn-ai" class="text-sm text-white hover:text-blue-500">Learn AI</a>
-              </li>
-              <li>
-                <a href="#learn-machine-learning" class="text-sm text-white hover:text-blue-500">Learn Machine Learning</a>
-              </li>
-              <li>
-                <a href="#learn-database" class="text-sm text-white hover:text-blue-500">Learn Database</a>
-              </li>
-              <li>
-                <a href="#learn-cloud-computing" class="text-sm text-white hover:text-blue-500">Learn Cloud Computing</a>
-              </li>
-              <li>
-                <a href="#learn-aws" class="text-sm text-white hover:text-blue-500">Learn AWS</a>
-              </li>
-              <li>
-                <a href="#learn-automating-testing" class="text-sm text-white hover:text-blue-500">Learn Automating Testing</a>
-              </li>
-              <li>
-                <a href="#learn-web-technologies" class="text-sm text-white hover:text-blue-500">Learn Web Technologies</a>
-              </li>
-              <li>
-                <a href="#learn-python" class="text-sm text-white hover:text-blue-500">Learn Python</a>
-              </li>
-              <li>
-                <a href="#learn-html-css" class="text-sm text-white hover:text-blue-500">Learn HTML/CSS</a>
-              </li>
-            </ul>
+            <span class="md:hidden"><img src="./down.svg" alt="" class="w-6 h-6"></span>
+            <!-- Down arrow for mobile view -->
           </div>
-        
-          <div class="w-30 h-auto text-white mt-5">
+          <hr class="my-1 border-t border-gray-300 md:hidden">
+          <ul id="onlineTraining" class="space-y-1 mt-2 hidden md:block">
+            <li><a href="#learn-ai" class="text-sm text-white hover:text-blue-500">Learn AI</a></li>
+            <li><a href="#learn-machine-learning" class="text-sm text-white hover:text-blue-500">Learn Machine
+                Learning</a></li>
+            <li><a href="#learn-database" class="text-sm text-white hover:text-blue-500">Learn Database</a></li>
+            <li><a href="#learn-cloud-computing" class="text-sm text-white hover:text-blue-500">Learn Cloud Computing</a>
+            </li>
+            <li><a href="#learn-aws" class="text-sm text-white hover:text-blue-500">Learn AWS</a></li>
+            <li><a href="#learn-automating-testing" class="text-sm text-white hover:text-blue-500">Learn Automating
+                Testing</a></li>
+            <li><a href="#learn-web-technologies" class="text-sm text-white hover:text-blue-500">Learn Web
+                Technologies</a></li>
+            <li><a href="#learn-python" class="text-sm text-white hover:text-blue-500">Learn Python</a></li>
+            <li><a href="#learn-html-css" class="text-sm text-white hover:text-blue-500">Learn HTML/CSS</a></li>
+          </ul>
+        </div>
+  
+        <!-- Job Oriented Courses -->
+        <div class="w-full md:w-1/4 h-auto text-white mt-2 md:mt-5 relative">
+          <div class="flex justify-between items-center cursor-pointer md:cursor-default"
+            onclick="toggleDropdown('jobOrientedCourses')">
             <h1 class="text-lg">Job Oriented Courses</h1>
-            <ul class="space-y-1 mt-2">
-              <li>
-                <a href="#learn-ai" class="text-sm text-white hover:text-blue-500">Learn AI</a>
-              </li>
-              <li>
-                <a href="#learn-machine-learning" class="text-sm text-white hover:text-blue-500">Learn Machine Learning</a>
-              </li>
-              <li>
-                <a href="#learn-database" class="text-sm text-white hover:text-blue-500">Learn Database</a>
-              </li>
-              <li>
-                <a href="#learn-cloud-computing" class="text-sm text-white hover:text-blue-500">Learn Cloud Computing</a>
-              </li>
-              <li>
-                <a href="#learn-aws" class="text-sm text-white hover:text-blue-500">Learn AWS</a>
-              </li>
-              <li>
-                <a href="#learn-automating-testing" class="text-sm text-white hover:text-blue-500">Learn Automating Testing</a>
-              </li>
-              <li>
-                <a href="#learn-web-technologies" class="text-sm text-white hover:text-blue-500">Learn Web Technologies</a>
-              </li>
-              <li>
-                <a href="#learn-python" class="text-sm text-white hover:text-blue-500">Learn Python</a>
-              </li>
-              <li>
-                <a href="#learn-html-css" class="text-sm text-white hover:text-blue-500">Learn HTML/CSS</a>
-              </li>
-            </ul>
+            <span class="md:hidden"><img src="./down.svg" alt="" class="w-6 h-6"></span>
+            <!-- Down arrow for mobile view -->
           </div>
+          <hr class="my-1 border-t border-gray-300 md:hidden">
+          <ul id="jobOrientedCourses" class="space-y-1 mt-2 hidden md:block">
+            <li><a href="#learn-ai" class="text-sm text-white hover:text-blue-500">Learn AI</a></li>
+            <li><a href="#learn-machine-learning" class="text-sm text-white hover:text-blue-500">Learn Machine
+                Learning</a></li>
+            <li><a href="#learn-database" class="text-sm text-white hover:text-blue-500">Learn Database</a></li>
+            <li><a href="#learn-cloud-computing" class="text-sm text-white hover:text-blue-500">Learn Cloud Computing</a>
+            </li>
+            <li><a href="#learn-aws" class="text-sm text-white hover:text-blue-500">Learn AWS</a></li>
+            <li><a href="#learn-automating-testing" class="text-sm text-white hover:text-blue-500">Learn Automating
+                Testing</a></li>
+            <li><a href="#learn-web-technologies" class="text-sm text-white hover:text-blue-500">Learn Web
+                Technologies</a></li>
+            <li><a href="#learn-python" class="text-sm text-white hover:text-blue-500">Learn Python</a></li>
+            <li><a href="#learn-html-css" class="text-sm text-white hover:text-blue-500">Learn HTML/CSS</a></li>
+          </ul>
         </div>
-        
-        <div class="ml-[10%] gap-[18%] flex flex-col md:flex-row  p-9">
-          <div class="w-30 h-auto text-white mt-1">
+      </div>
+  
+      <div class="md:ml-[10%] w-full gap-4 flex flex-col md:flex-row p-4 md:p-9">
+        <!-- About Us -->
+        <div class="w-full md:w-1/3 h-auto text-white mt-2 md:mt-5 relative">
+          <div class="flex justify-between items-center cursor-pointer md:cursor-default"
+            onclick="toggleDropdown('aboutUs')">
             <h1 class="text-lg">About Us</h1>
-            <ul class="space-y-1 mt-2">
-              <li>
-                <a href="#partner-with-us" class="text-sm text-white hover:text-blue-500">Partner with Us</a>
-              </li>
-              <li>
-                <a href="#about" class="text-sm text-white hover:text-blue-500">About</a>
-              </li>
-              <li>
-                <a href="#business" class="text-sm text-white hover:text-blue-500">Business</a>
-              </li>
-              <li>
-                <a href="#career" class="text-sm text-white hover:text-blue-500">Career</a>
-              </li>
-              <li>
-                <a href="#news" class="text-sm text-white hover:text-blue-500">News</a>
-              </li>
-              <li>
-                <a href="#blog" class="text-sm text-white hover:text-blue-500">Blog</a>
-              </li>
-            </ul>
+            <span class="md:hidden"><img src="./down.svg" alt="" class="w-6 h-6"></span>
+            <!-- Down arrow for mobile view -->
           </div>
-        
-          <div class="w-30 h-auto text-white mt-1">
-            <h1 class="text-lg">Connect</h1>
-            <ul class="space-y-1 mt-2">
-              <li>
-                <a href="mailto:example@gmail.com" class="text-sm text-white hover:text-blue-500">Gmail</a>
-              </li>
-              <li>
-                <a href="https://www.facebook.com" target="_blank" class="text-sm text-white hover:text-blue-500">Facebook</a>
-              </li>
-              <li>
-                <a href="https://telegram.org" target="_blank" class="text-sm text-white hover:text-blue-500">Telegram</a>
-              </li>
-              <li>
-                <a href="https://wa.me" target="_blank" class="text-sm text-white hover:text-blue-500">WhatsApp</a>
-              </li>
-              <li>
-                <a href="https://www.instagram.com" target="_blank" class="text-sm text-white hover:text-blue-500">Instagram</a>
-              </li>
-            </ul>
-          </div>
-        
-          <div class="w-30 h-auto text-white mt-1">
-            <h1 class="text-lg">Legal</h1>
-            <ul class="space-y-1 mt-2">
-              <li>
-                <a href="#terms-of-service" class="text-sm text-white hover:text-blue-500">Terms of Service</a>
-              </li>
-              <li>
-                <a href="#privacy-policy" class="text-sm text-white hover:text-blue-500">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#cookie-policy" class="text-sm text-white hover:text-blue-500">Cookie Policy</a>
-              </li>
-              <li>
-                <a href="#accessibility-policy" class="text-sm text-white hover:text-blue-500">Accessibility Policy</a>
-              </li>
-              <li>
-                <a href="#trademark-policy" class="text-sm text-white hover:text-blue-500">Trademark Policy</a>
-              </li>
-              <li>
-                <a href="#modern-slavery-statement" class="text-sm text-white hover:text-blue-500">Modern Slavery Statement</a>
-              </li>
-              <li>
-                <a href="#sitemap" class="text-sm text-white hover:text-blue-500">Sitemap</a>
-              </li>
-              <li>
-                <a href="#your-privacy-choices" class="text-sm text-white hover:text-blue-500">Your Privacy Choices</a>
-              </li>
-            </ul>
-          </div>
+          <hr class="my-1 border-t border-gray-300 md:hidden">
+          <ul id="aboutUs" class="space-y-1 mt-2 hidden md:block">
+            <li><a href="#partner-with-us" class="text-sm text-white hover:text-blue-500">Partner with Us</a></li>
+            <li><a href="#about" class="text-sm text-white hover:text-blue-500">About</a></li>
+            <li><a href="#business" class="text-sm text-white hover:text-blue-500">Business</a></li>
+            <li><a href="#career" class="text-sm text-white hover:text-blue-500">Career</a></li>
+            <li><a href="#news" class="text-sm text-white hover:text-blue-500">News</a></li>
+            <li><a href="#blog" class="text-sm text-white hover:text-blue-500">Blog</a></li>
+          </ul>
         </div>
-        
-      
-        <hr class="border-t border-blue-400 my-2 h-1">
-        <span class="text-white text-xl mt-5 ml-6">@ 2025 Techdact. All Rights Reserved</span>
-      </footer>
+  
+        <!-- Connect -->
+        <div class="w-full md:w-1/3 h-auto text-white mt-2 md:mt-5 relative">
+          <div class="flex justify-between items-center cursor-pointer md:cursor-default"
+            onclick="toggleDropdown('connect')">
+            <h1 class="text-lg">Connect</h1>
+            <span class="md:hidden"><img src="./down.svg" alt="" class="w-6 h-6"></span>
+            <!-- Down arrow for mobile view -->
+          </div>
+          <hr class="my-1 border-t border-gray-300 md:hidden">
+          <ul id="connect" class="space-y-1 mt-2 hidden md:block">
+            <li><a href="mailto:example@gmail.com" class="text-sm text-white hover:text-blue-500">Gmail</a></li>
+            <li><a href="https://www.facebook.com" target="_blank"
+                class="text-sm text-white hover:text-blue-500">Facebook</a></li>
+            <li><a href="https://telegram.org" target="_blank" class="text-sm text-white hover:text-blue-500">Telegram</a>
+            </li>
+            <li><a href="https://wa.me" target="_blank" class="text-sm text-white hover:text-blue-500">WhatsApp</a></li>
+            <li><a href="https://www.instagram.com" target="_blank"
+                class="text-sm text-white hover:text-blue-500">Instagram</a></li>
+          </ul>
+        </div>
+  
+        <!-- Legal -->
+        <div class="w-full md:w-1/3 h-auto text-white mt-2 md:mt-5 relative">
+          <div class="flex justify-between items-center cursor-pointer md:cursor-default"
+            onclick="toggleDropdown('legal')">
+            <h1 class="text-lg">Legal</h1>
+            <span class="md:hidden"><img src="./down.svg" alt="" class="w-6 h-6"></span>
+            <!-- Down arrow for mobile view -->
+          </div>
+          <hr class="my-1 border-t border-gray-300 md:hidden">
+          <ul id="legal" class="space-y-1 mt-2 hidden md:block">
+            <li><a href="#terms-of-service" class="text-sm text-white hover:text-blue-500">Terms of Service</a></li>
+            <li><a href="#privacy-policy" class="text-sm text-white hover:text-blue-500">Privacy Policy</a></li>
+            <li><a href="#cookie-policy" class="text-sm text-white hover:text-blue-500">Cookie Policy</a></li>
+            <li><a href="#accessibility-policy" class="text-sm text-white hover:text-blue-500">Accessibility Policy</a>
+            </li>
+            <li><a href="#trademark-policy" class="text-sm text-white hover:text-blue-500">Trademark Policy</a></li>
+            <li><a href="#modern-slavery-statement" class="text-sm text-white hover:text-blue-500">Modern Slavery
+                Statement</a></li>
+            <li><a href="#sitemap" class="text-sm text-white hover:text-blue-500">Sitemap</a></li>
+            <li><a href="#your-privacy-choices" class="text-sm text-white hover:text-blue-500">Your Privacy Choices</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+  
+  
+      <script>
+        function toggleDropdown(id) {
+          const dropdownMenu = document.getElementById(id);
+          dropdownMenu.classList.toggle('hidden');
+        }
+      </script>
+  
+  
+  
+      <hr class="border-t border-blue-400 my-2 h-1">
+      <span class="text-white text-xl mt-5 ml-6">@ 2025 Techdact. All Rights Reserved</span>
+    </footer>
 
 <!-- Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
+    function initSwiper() {
+    var isMobile = window.innerWidth <= 640; // Check if it's mobile
+
     var swiper = new Swiper(".swiper", {
-        slidesPerView: "3",
-        loop: false, 
-        centeredSlides: false, 
+        slidesPerView: "auto",
+        spaceBetween: 16,
+        autoplay: isMobile
+            ? {
+                  delay: 3000, // Auto-scroll every 3s on mobile
+                  disableOnInteraction: false,
+              }
+            : false, // Disable autoplay on larger screens
+         // Infinite loop
+        breakpoints: {
+            320: { slidesPerView: 1, spaceBetween: 50},
+            640: { slidesPerView: 2, spaceBetween: 16 },
+            1024: { slidesPerView: 3, spaceBetween: 20 },
+        },
         navigation: {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
         },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        on: {
-            afterInit: function (swiper) {
-                checkArrows(swiper);
-            },
-            slideChange: function (swiper) {
-                checkArrows(swiper);
-            },
-            resize: function (swiper) {
-                checkArrows(swiper);
-            }
-        }
     });
+
+    return swiper;
+}
+
+// Initialize on page load
+var swiperInstance = initSwiper();
+
+// Reinitialize Swiper on window resize to apply autoplay condition
+window.addEventListener("resize", function () {
+    swiperInstance.destroy(true, true); // Destroy existing Swiper instance
+    swiperInstance = initSwiper(); // Reinitialize with updated settings
+});
   
     function checkArrows(swiper) {
         const nextBtn = document.querySelector(".swiper-button-next");
@@ -761,6 +754,21 @@
             nextBtn.style.display = "flex";
         }
     }
+    function updateSwiperButtons() {
+    var isMobile = window.innerWidth <= 640;
+    document.querySelector(".swiper-button-next").style.display = isMobile ? "none" : "block";
+    document.querySelector(".swiper-button-prev").style.display = isMobile ? "none" : "block";
+}
+
+function toggleDropdown(id) {
+      const dropdownMenu = document.getElementById(id);
+      dropdownMenu.classList.toggle('hidden');
+    }
+
+// Run on load and resize
+window.addEventListener("load", updateSwiperButtons);
+window.addEventListener("resize", updateSwiperButtons);
+
   </script>
   
 
